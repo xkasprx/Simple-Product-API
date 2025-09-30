@@ -41,16 +41,27 @@ Includes endpoints to fetch all products, paged results, and data via a stored p
    
 4. Create the stored procedure used by the API:
    ```sql
-   CREATE PROCEDURE usp_GetProducts
-   AS
-   BEGIN
-       SELECT * FROM Products;
-   END;
+	CREATE PROCEDURE usp_GetProductsUnder10
+	AS
+	BEGIN
+	    SET NOCOUNT ON;
+	    
+	    SELECT 
+	        Id, 
+	        Name, 
+	        Price
+	    FROM 
+	        Products
+	    WHERE 
+	        Price < 10
+	    ORDER BY 
+	        Price ASC;
+	END;
    ```
 
 _Note: Included is a `database.sql` file that can also be utilized._
 
-5. Update `appsettings.json` with your connection string.
+5. Update `appsettings.json` with your connection string - don't forget to remove `.template` from the file name.
 6. Trust HTTPS dev certificate:
 
    ```bash
@@ -101,7 +112,7 @@ _Note: Included is a `database.sql` file that can also be utilized._
 
 ## Running Tests
 
-To execute the automated tests, navigate to the solution root and run:
+To execute the automated tests, navigate to the Tests folder and run:
 
 ```bash
  dotnet test
