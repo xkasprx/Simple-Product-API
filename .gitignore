@@ -1,0 +1,6 @@
+# Build & bin folders
+bin/
+obj/
+
+# User-specific files
+appsettings.json
