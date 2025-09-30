@@ -61,7 +61,7 @@ Includes endpoints to fetch all products, paged results, and data via a stored p
 
 _Note: Included is a `database.sql` file that can also be utilized._
 
-5. Update `appsettings.json` with your connection string.
+5. Update `appsettings.json` with your connection string - don't forget to remove `.template` from the file name.
 6. Trust HTTPS dev certificate:
 
    ```bash
@@ -112,7 +112,7 @@ _Note: Included is a `database.sql` file that can also be utilized._
 
 ## Running Tests
 
-To execute the automated tests, navigate to the solution root and run:
+To execute the automated tests, navigate to the Tests folder and run:
 
 ```bash
  dotnet test
