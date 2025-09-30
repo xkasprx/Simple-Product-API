@@ -41,22 +41,22 @@ Includes endpoints to fetch all products, paged results, and data via a stored p
    
 4. Create the stored procedure used by the API:
    ```sql
-CREATE PROCEDURE usp_GetProductsUnder10
-AS
-BEGIN
-    SET NOCOUNT ON;
-    
-    SELECT 
-        Id, 
-        Name, 
-        Price
-    FROM 
-        Products
-    WHERE 
-        Price < 10
-    ORDER BY 
-        Price ASC;
-END;
+	CREATE PROCEDURE usp_GetProductsUnder10
+	AS
+	BEGIN
+	    SET NOCOUNT ON;
+	    
+	    SELECT 
+	        Id, 
+	        Name, 
+	        Price
+	    FROM 
+	        Products
+	    WHERE 
+	        Price < 10
+	    ORDER BY 
+	        Price ASC;
+	END;
    ```
 
 _Note: Included is a `database.sql` file that can also be utilized._
