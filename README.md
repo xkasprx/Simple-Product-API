@@ -1,4 +1,4 @@
-# CRC Simple Product API
+# Simple Product API
 
 ## Overview
 A simple ASP.NET Core Web API to fetch product data from a local SQL Server database.  
