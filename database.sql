@@ -44,7 +44,6 @@ INSERT INTO "Products" ("Id", "Name", "Price") VALUES
 /*!40000 ALTER TABLE "Products" ENABLE KEYS */;
 
 /* Create stored procedure to get products under $10 */
-DELIMITER //
 CREATE PROCEDURE usp_GetProductsUnder10
 AS
 BEGIN
@@ -60,8 +59,7 @@ BEGIN
         Price < 10
     ORDER BY 
         Price ASC;
-END;//
-DELIMITER ;
+END;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
