@@ -33,7 +33,7 @@ if (app.Environment.IsDevelopment()) {
 	app.UseSwagger();
 	app.UseSwaggerUI(c => {
 		c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API V1");
-		c.RoutePrefix = "swagger"; // Serve Swagger UI at application root
+		c.RoutePrefix = "swagger"; // Serve Swagger UI at /swagger
 	});
 }
 
