@@ -47,6 +47,9 @@ Includes endpoints to fetch all products, paged results, and data via a stored p
        SELECT * FROM Products;
    END;
    ```
+
+_Note: Included is a `database.sql` file that can also be utilized._
+
 5. Update `appsettings.json` with your connection string.
 6. Trust HTTPS dev certificate:
 
